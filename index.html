@@ -222,7 +222,6 @@ background:transparent;
 }
 
 .about-container{
-padding-bottom:0 !important;
 }
 
 .about-container .about-title{
@@ -244,10 +243,16 @@ background:transparent;
 
 .features-container{
 color:#FC5600;
-padding-top:0 !important;
 }
 
-.features-container .tokenomics-title{
+.features-container .features-title{
+    color:#FC5600;
+    font-size:4.5em;font-weight:700;line-height:75px;
+}
+
+.features-container .features-title .text-1{
+    color:#FC5600;
+    font-size:0.9063em;font-weight:700;
 }
 
 .features-container .tokenomics-description{
@@ -272,14 +277,14 @@ font-weight:700;
     
 .features-container .tax-title-2{
 color: #FC5600;
-font-size: 1.5em;
+font-size: 2em;
 font-weight: 700;
 letter-spacing: 0;
 line-height: 1;
 }
     
 .features-container .tax-description{
-font-size:1em;
+font-size:1.25em;
 font-weight:400;
     color: #FC5600;
 }
@@ -307,6 +312,8 @@ font-family:'Poppins', sans-serif;
 }
 
 .tokenomics-container .tokenomics-title{
+    font-size:4.5em;font-weight:700;
+color:#580B08;
 }
 
 .tokenomics-container .tokenomics-description{
@@ -322,7 +329,7 @@ background:#FFFFFF;
 .tokenomics-container .tax-title{
 color: #FC5600;
 font-weight: 600;
-line-height: 0.85;
+line-height: 1.24;
 -webkit-text-stroke-width: 0px;
 -webkit-text-stroke-color: #F2BC1C;
 font-size:5em;
@@ -331,28 +338,30 @@ font-weight:700;
     
 .tokenomics-container .tax-title-2{
 color: #FC5600;
-font-size: 1.5em;
+font-size: 2em;
 font-weight: 700;
 letter-spacing: 0;
 line-height: 1;
 }
     
 .tokenomics-container .tax-description{
-font-size:1em;
+font-size:1.25em;
 font-weight:400;
     color:#FC5600;
 }
 
 
 .tokenomics-container .tokenomics-info-table td{
-	padding:1em 1em;
+	padding:16px 8px;
 	border:0px solid #ECF4FF;
 	color: #FC5600 !important;
 background:transparent !important;
+font-size:1.5em;
 }
 
 .tokenomics-container .tokenomics-info-table td span{
 	color: #FC5600 !important;
+    
 }
 
 .tokenomics-container .table{
@@ -388,14 +397,19 @@ color:#FC5600;
 .roadmap-container ul > li{
 margin-bottom:4px;
 margin-top:4px;
+    font-size:1.25em;
+    font-weight:700;
 }
 
 .roadmap-container .roadmap-title{
-    color:#FC5600;
+    font-size:4.5em;font-weight:700;
+color:#580B08;
 }
 
 .roadmap-container h4{
-color:#FC5600;
+color:#580B08;
+font-size: 2em;
+    font-weight:700;
 }
 
 /* ---------------- */
@@ -413,11 +427,16 @@ color:#FC5600;
 color:#FC5600;
 }
 
+.swap-container .swap-title{
+    font-size:4.5em;font-weight:700;
+color:#580B08;
+}
+
 
 /* ---------------- */
 
     
-    /* ROADMAP SECTION */ 
+    /* FAQ SECTION */ 
 
 .faq-section{
 background:transparent;
@@ -425,6 +444,11 @@ background:transparent;
 	
 .faq-container{
 color:#FC5600;
+}
+
+.faq-container .faq-title{
+    font-size:4.5em;font-weight:700;
+color:#580B08;
 }
 
 .faq-container .accordion-item {
@@ -498,6 +522,33 @@ font-weight:500;
 }
 
 @media (min-width: 992px){
+
+.faq-container .faq-title{
+    font-size:6em;
+}
+
+.swap-container .swap-title{
+    font-size:6em;
+}
+
+    .roadmap-container .roadmap-title{
+   font-size:6em;
+}
+    
+    .tokenomics-container .tokenomics-title{
+    font-size:6em;
+}
+
+    
+.features-container .features-title{
+    color:#FC5600;
+    font-size:6em;font-weight:700;line-height:93px;
+}
+
+.features-container .features-title .text-1{
+    color:#FC5600;
+    font-size:0.9063em;font-weight:700;
+}
 
 .about-container .about-title{
    color:#FC5600;
@@ -652,7 +703,7 @@ z-index:3;
     object-fit: cover;
 }
     </style>
-</head>
+<style></style></head>
 <body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
 
 <header>
@@ -679,7 +730,7 @@ z-index:3;
 </header>
 
 <main>
-    <div class="background d-none"><div class="overlay"></div></div>
+    <div class="background d-none"><div class="overlay" style=""></div></div>
 
     
 <section class="hero-section" style="position:relative;">
@@ -715,17 +766,13 @@ z-index:3;
 </div>
 </section>
 
-<section id="about" class="section about-section" style="position:relative;">
-    <div class="g-border-top">
-				<div class="g-border-top__left"></div>
-				<div class="g-border-top__center"></div>
-				<div class="g-border-top__right"></div>
-			</div>
+<section id="about" class="py-5 section about-section" style="position:relative;">
+    
 <div class="section-container about-container container py-5" style="">
 
 
-<div class="row"><div class="mb-4 mb-lg-0 col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
-<h2 class="w-100 section-title about-title text-start text-lg-center aos-init aos-animate" data-aos="fade">WHAT IS <span style="color:#580B08;">BUDDHACOIN</span></h2>
+<div class="row"><div class="mb-5 mb-lg-0 col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+<h2 class="w-100 section-title about-title text-start text-lg-center aos-init aos-animate" data-aos="fade">WHAT IS<br><span style="color:#580B08;">BUDDHACOIN</span></h2>
     
 </div>
 
@@ -736,27 +783,27 @@ z-index:3;
 </div>
 </div>
 </section>
-<section id="features" class="section features-section pt-5" style="position:relative;">
+<section id="features" class="section features-section py-5" style="position:relative;">
 <div class="section-container features-container container py-5">
-<h2 class="pb-5 section-title tokenomics-title text-center aos-init aos-animate" data-aos="fade" style="font-size:6em;font-weight:700;line-height:95px;">WHY INVEST IN<br><span style="color:#580B08;">BUDDHACOIN</span></h2><div class="row mt-5 mb-4">
+<p class="mb-5 pb-4 section-title features-title text-center aos-init aos-animate" data-aos="fade" style=""><span class="text-1">WHY INVEST IN</span><br><span class="text-2" style="color:#580B08;">BUDDHACOIN</span></p><div class="row">
 
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init aos-animate" data-aos="fade" style="">
-<img class="img-fluid mb-4" src="images/community-driven-2.png" style="max-height:100px;">
-<span class="tax-title-2 text-center mb-3">Community Driven</span><span class="tax-description text-center">Community focused and fair launched. The future of the project will depend on the community.</span>
+<img class="img-fluid mb-3" src="images/community-driven-2.png" style="max-height:100px;">
+<span class="tax-title-2 text-center mb-3">COMMUNITY DRIVEN</span><span class="tax-description text-center">Community focused and fair launched. The future of the project will depend on the community.</span>
 </div>
 </div>
 
 
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init aos-animate" data-aos="fade" style="">
-<img class="img-fluid mb-4" src="images/lp-lock-2.png" style="max-height:100px;">
-<span class="tax-title-2 text-center mb-3">Secured By Design</span><span class="tax-description text-center ">Initial Liquidity Provided will be locked. This ensures that the project will not be rug-pulled.</span>
+<img class="img-fluid mb-3" src="images/lp-lock-2.png" style="max-height:100px;">
+<span class="tax-title-2 text-center mb-3">SECURED BY DESIGN</span><span class="tax-description text-center ">Initial Liquidity Provided will be locked. This ensures that the project will not be rug-pulled.</span>
 </div>
 </div><div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init aos-animate" data-aos="fade" style="">
-<img class="p-1 img-fluid mb-4 " src="images/anti-whale-2.png" style="max-height:100px;">
-<span class="tax-title-2 text-center mb-3">Safe and Whale-Proof</span><span class="tax-description text-center">Sells are restricted to less than 2% of the total supply to reduce swing-trading and break whales' control.</span>
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
+<img class="p-1 img-fluid mb-3 " src="images/anti-whale-2.png" style="max-height:100px;">
+<span class="tax-title-2 text-center mb-3">SAFE AND WHALE-PROOF</span><span class="tax-description text-center">Sells are restricted to less than 2% of the total supply to reduce swing-trading and break whales' control.</span>
 </div>
 </div>
 
@@ -771,38 +818,34 @@ z-index:3;
     
 </section>
 
-<section id="tokenomics" class="section tokenomics-section" style="position:relative;">
-    <div class="g-border-bottom">
-				<div class="g-border-bottom__left"></div>
-				<div class="g-border-bottom__center"></div>
-				<div class="g-border-bottom__right"></div>
-			</div>
+<section id="tokenomics" class="py-5 section tokenomics-section" style="position:relative;">
+    
 <div class="section-container tokenomics-container container py-5">
-<h2 class="mt-4 section-title tokenomics-title text-center aos-init" data-aos="fade">TOKENOMICS</h2>
-<div class="row">
+<h2 class="mb-5 pb-4 section-title tokenomics-title text-center aos-init" data-aos="fade">TOKENOMICS</h2>
+<div class="row mb-5">
 <div class="col-12">
-                       <table class="table table-striped tokenomics-info-table mt-5 mb-4 mx-auto aos-init" data-aos="fade">
+                       <table class="table table-striped tokenomics-info-table mx-auto aos-init" data-aos="fade">
 					<tbody><tr>
-						<td style="font-weight:500;">Token Name</td>
-						<td style="font-weight:300;text-align: right;">BuddhaCoin</td>
+						<td style="font-weight:700;color:#580B08 !important">Token Name</td>
+						<td style="font-weight:700;text-align: right;">BuddhaCoin</td>
 					</tr>
 					<tr>
-						<td style="font-weight:500;">Token Ticker</td>
-						<td style="font-weight:300;white-space:nowrap;text-align: right;">$BUDDHA</td>
+						<td style="font-weight:700;color:#580B08 !important">Token Ticker</td>
+						<td style="font-weight:700;white-space:nowrap;text-align: right;">$BUDDHA</td>
 					</tr><tr>
-						<td style="font-weight:500;">Token Network</td>
-						<td style="font-weight:300;white-space:nowrap;text-align: right;">Binance Smart Chain</td>
+						<td style="font-weight:700;color:#580B08 !important">Token Network</td>
+						<td style="font-weight:700;white-space:nowrap;text-align: right;">BSC</td>
 					</tr>
 
 					<tr>
-						<td style="font-weight:500;">Total Supply</td>
-						<td style="font-weight:300;text-align: right;">1,000,000,000 $BUDDHA</td>
+						<td style="font-weight:700;color:#580B08 !important">Total Supply</td>
+						<td style="font-weight:700;text-align: right;">1B $BUDDHA</td>
 					</tr>
 					
 				</tbody></table>
                     </div>
 </div>
-<div class="row mb-4">
+<div class="row">
 
 
 
@@ -812,19 +855,19 @@ z-index:3;
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">6%</span>
-<span class="tax-title-2 text-center mb-3">Marketing</span><span class="tax-description text-center">6% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
+<span class="tax-title-2 text-center mb-3">MARKETING</span><span class="tax-description text-center">6% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
 </div>
 </div><div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">1%</span>
-<span class="tax-title-2 text-center mb-3">Liquidity Pool</span><span class="tax-description text-center">1% of every transaction is transformed into liquidity. It's automatic and helps create a price floor.</span>
+<span class="tax-title-2 text-center mb-3">LIQUIDITY POOL</span><span class="tax-description text-center">1% of every transaction is transformed into liquidity. It's automatic and helps create a price floor.</span>
 </div>
 </div>
 
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">1%</span>
-<span class="tax-title-2 text-center mb-3">Development</span><span class="tax-description text-center">1% of every transaction is taken and will be used to for the development of Megaman Inu Ecosystem.</span>
+<span class="tax-title-2 text-center mb-3">DEVELOPMENT</span><span class="tax-description text-center">1% of every transaction is taken and will be used to for the development of Buddha Coin Ecosystem.</span>
 </div>
 </div>
 
@@ -848,11 +891,11 @@ z-index:3;
 <div class="col-12 col-lg-4 text-center py-3">
 <h4 data-aos="fade" class="aos-init">PHASE 1</h4>
 <ul class="list-unstyled text-small text-center mt-3 aos-init" data-aos="fade">
-<li>Telegram and Twitter Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
-<li>Initial Marketing Campaign<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
-<li>Pancakeswap Fair Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
-<li>LP Lock Extension<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
-<li>Website V1 Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
+<li>Telegram and Twitter Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#580B08" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
+<li>Initial Marketing Campaign<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#580B08" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
+<li>Pancakeswap Fair Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#580B08" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
+<li>LP Lock Extension<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#580B08" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
+<li>Website V1 Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#580B08" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
 </ul>
 </div>
 <div class="col-12 col-lg-4 text-center py-3">
@@ -897,7 +940,7 @@ z-index:3;
 				<div class="g-border-bottom__right"></div>
 			</div>
 <div class="section-container swap-container container py-5">
-<h2 class="mt-4 section-title swap-title text-center aos-init" data-aos="fade">BUY $BUDDHA</h2>
+<h2 class="mt-4 section-title swap-title text-center aos-init" data-aos="fade"><span style="color:#FC5600">BUY</span> $BUDDHA</h2>
 
 <div class="row mt-5 mb-4">
 
@@ -1043,6 +1086,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
