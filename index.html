@@ -125,15 +125,17 @@ letter-spacing:0em;
 	
 .hero-container .hero-title{
 font-weight:700;
-font-size:4em;
+font-size:4.5em;
     position:relative;
+    color:#580B08;
 }
 
     
     
 .hero-container .hero-description{
-font-size:1.25em;
+font-size:1.5em;
 text-align: center !important;
+    font-weight:700;
 }
     
     
@@ -225,10 +227,11 @@ padding-bottom:0 !important;
 
 .about-container .about-title{
    color:#FC5600;
-    
+    font-size:4.5em;font-weight:700;line-height:77px;
 }
 
 .about-container .about-description{
+font-size:1.5em;font-weight:700;line-height:36px;
 }
 
 /* ---------------- */
@@ -495,6 +498,18 @@ font-weight:500;
 }
 
 @media (min-width: 992px){
+
+.about-container .about-title{
+   color:#FC5600;
+    font-size:6em;font-weight:700;line-height:98px;
+}
+
+.about-container .about-description{
+font-size: 1.5em;
+    font-weight: 700;
+    line-height: 36px;
+}
+
 	/*
 	.hero-container{
     height: calc(100vh - 76px);
@@ -507,8 +522,8 @@ font-size:1.5em;
 }
 
 .hero-container .hero-title{
-font-weight:700;
-font-size:5em;
+font-size:6em;
+    font-weight:700;
 }
     
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -531,7 +546,7 @@ padding-right: 0rem !important;
 .navbar-collapse{
 padding-top:76px !important;
 z-index:2 !important;
-background:#FC5600 !important;
+background:#580B08 !important;
 position:fixed !important;
 top:0 !important;
 left:0 !important;
@@ -597,7 +612,7 @@ color:#FC5600 !important;
 }
     
      .nav-link:hover{
-color:#3A312E !important;   
+color:#580B08 !important;   
 	}
 	
 .navbar-toggler {
@@ -642,7 +657,7 @@ z-index:3;
 
 <header>
 <nav class="navbar navbar-expand-lg navbar-dark" id="#home">
-<div class="container" data-aos="fade">
+<div class="container aos-init aos-animate" data-aos="fade">
 <a class="navbar-brand d-flex flex-row justify-content-center align-items-center" href="/">
     <img class="img-fluid me-2" src="images/image-2.png" style="max-height:40px;">
 <h1 class="mb-0" style="font-size:0.875em;font-weight:700;color:#FC5600">$BUDDHA</h1></a>
@@ -674,11 +689,11 @@ z-index:3;
 <div class="hero-container container py-5 d-flex flex-column justify-content-center align-items-center">
 <div class="row">
 
-<div data-aos="fade-right" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+<div data-aos="fade-right" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center aos-init aos-animate">
 
-<h1 class="hero-title text-center"><span style="font-size:120px;font-weight:700;">BUDDHACOIN</span> </h1>
+<h1 class="hero-title text-center mb-3"><span>BUDDHACOIN</span> </h1>
 
-<p class="hero-description mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p class="hero-description">BuddhaCoin is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain.</p>
 <div class="d-none d-flex flex-column flex-sm-row mt-3">
 <a type="button" class="buy-button btn btn-primary m-2 " href="https://pancakeswap.finance/swap?outputCurrency=0x6927874e3b90ca69a0cc5d34b38bdbfc0a4aeaba" target="_blank" style="box-shadow: rgba(204, 29, 222, 0.25) 0px 6px 12px -2px, rgba(204, 29, 222, 0.3) 0px 3px 7px -3px !important;">Buy On Pancakeswap</a>
 <a type="button" class="telegram-button btn btn-primary m-2" href="https://t.me/FartInu" target="_blank" style="box-shadow: rgba(76, 232, 211, 0.25) 0px 6px 12px -2px, rgba(76, 232, 211, 0.3) 0px 3px 7px -3px !important;">Join Our Telegram</a>
@@ -690,7 +705,7 @@ z-index:3;
 </div>
 </div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
 
-<div class="hero-img-wrapper w-100" data-aos="fade-left"><img class="hero-img hero-image img-fluid w-100" src="images/image-1.png" style="background:transparent !important;filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));"></div>
+<div class="px-5 hero-img-wrapper w-100 aos-init aos-animate" data-aos="fade-left"><img class="hero-img hero-image img-fluid w-100" src="images/image-1.png" style="background:transparent !important;filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));"></div>
 
 
 
@@ -706,27 +721,27 @@ z-index:3;
 				<div class="g-border-top__center"></div>
 				<div class="g-border-top__right"></div>
 			</div>
-<div class="section-container about-container container py-5" style="padding-bottom:7em !important;">
-<h2 class="d-none section-title about-title mt-4 text-center" data-aos="fade">ABOUT</h2>
+<div class="section-container about-container container py-5" style="">
 
-<div class="row mt-5"><div class="col-6 text-center d-flex flex-column justify-content-center align-items-center">
-<p class="section-description about-description" data-aos="fade" style="font-size:6em;font-weight:700;line-height:95px;">WHAT IS BUDDHACOIN</p>
+
+<div class="row"><div class="mb-4 mb-lg-0 col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+<h2 class="w-100 section-title about-title text-start text-lg-center aos-init aos-animate" data-aos="fade">WHAT IS <span style="color:#580B08;">BUDDHACOIN</span></h2>
     
 </div>
 
-<div class="col-6 text-center">
-<p class="section-description about-description" style="font-size:1.75em;font-weight:700;line-height:40px;" data-aos="fade">BuddhaCoin is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain through the BSC medium. It is community driven and backed by a strong team to deliver for investors with the goal of creating wealth and use case just by holding the token. To achieve this vision, a detailed roadmap is laid out and the liquidity is locked initially to grant investors confidence in this project.</p>
+<div class="col-12 col-lg-6">
+<p class="text-start text-lg-center section-description about-description aos-init aos-animate" style="" data-aos="fade">BuddhaCoin is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain through the BSC medium. It is community driven and backed by a strong team to deliver for investors with the goal of creating wealth and use case just by holding the token. To achieve this vision, a detailed roadmap is laid out and the liquidity is locked initially to grant investors confidence in this project.</p>
     
 </div>
 </div>
 </div>
 </section>
-<section id="features" class="section features-section pt-5" style="position:relative;margin-top">
+<section id="features" class="section features-section pt-5" style="position:relative;">
 <div class="section-container features-container container py-5">
-<h2 class="pb-5 section-title tokenomics-title text-center" data-aos="fade" style="font-size:6em;font-weight:700;line-height:95px;">WHY INVEST IN<br><span style="">BUDDHACOIN</span></h2><div class="row mt-5 mb-4">
+<h2 class="pb-5 section-title tokenomics-title text-center aos-init aos-animate" data-aos="fade" style="font-size:6em;font-weight:700;line-height:95px;">WHY INVEST IN<br><span style="color:#580B08;">BUDDHACOIN</span></h2><div class="row mt-5 mb-4">
 
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init aos-animate" data-aos="fade" style="">
 <img class="img-fluid mb-4" src="images/community-driven-2.png" style="max-height:100px;">
 <span class="tax-title-2 text-center mb-3">Community Driven</span><span class="tax-description text-center">Community focused and fair launched. The future of the project will depend on the community.</span>
 </div>
@@ -734,12 +749,12 @@ z-index:3;
 
 
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init aos-animate" data-aos="fade" style="">
 <img class="img-fluid mb-4" src="images/lp-lock-2.png" style="max-height:100px;">
 <span class="tax-title-2 text-center mb-3">Secured By Design</span><span class="tax-description text-center ">Initial Liquidity Provided will be locked. This ensures that the project will not be rug-pulled.</span>
 </div>
 </div><div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init aos-animate" data-aos="fade" style="">
 <img class="p-1 img-fluid mb-4 " src="images/anti-whale-2.png" style="max-height:100px;">
 <span class="tax-title-2 text-center mb-3">Safe and Whale-Proof</span><span class="tax-description text-center">Sells are restricted to less than 2% of the total supply to reduce swing-trading and break whales' control.</span>
 </div>
@@ -763,10 +778,10 @@ z-index:3;
 				<div class="g-border-bottom__right"></div>
 			</div>
 <div class="section-container tokenomics-container container py-5">
-<h2 class="mt-4 section-title tokenomics-title text-center" data-aos="fade">TOKENOMICS</h2>
+<h2 class="mt-4 section-title tokenomics-title text-center aos-init" data-aos="fade">TOKENOMICS</h2>
 <div class="row">
 <div class="col-12">
-                       <table class="table table-striped tokenomics-info-table mt-5 mb-4 mx-auto" data-aos="fade">
+                       <table class="table table-striped tokenomics-info-table mt-5 mb-4 mx-auto aos-init" data-aos="fade">
 					<tbody><tr>
 						<td style="font-weight:500;">Token Name</td>
 						<td style="font-weight:300;text-align: right;">BuddhaCoin</td>
@@ -795,19 +810,19 @@ z-index:3;
 
 
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">6%</span>
 <span class="tax-title-2 text-center mb-3">Marketing</span><span class="tax-description text-center">6% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
 </div>
 </div><div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">1%</span>
 <span class="tax-title-2 text-center mb-3">Liquidity Pool</span><span class="tax-description text-center">1% of every transaction is transformed into liquidity. It's automatic and helps create a price floor.</span>
 </div>
 </div>
 
 <div class="col-12 col-lg-4 mb-4">
-<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
+<div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto aos-init" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">1%</span>
 <span class="tax-title-2 text-center mb-3">Development</span><span class="tax-description text-center">1% of every transaction is taken and will be used to for the development of Megaman Inu Ecosystem.</span>
 </div>
@@ -828,11 +843,11 @@ z-index:3;
 			</div>
 <div class="section-container roadmap-container container py-5">
 <div class="text-center">
-<h2 class="section-title roadmap-title mt-4" data-aos="fade">ROADMAP</h2>
+<h2 class="section-title roadmap-title mt-4 aos-init" data-aos="fade">ROADMAP</h2>
 <div class="row mt-5 mb-4">
 <div class="col-12 col-lg-4 text-center py-3">
 <h4 data-aos="fade" class="aos-init">PHASE 1</h4>
-<ul class="list-unstyled text-small text-center mt-3" data-aos="fade">
+<ul class="list-unstyled text-small text-center mt-3 aos-init" data-aos="fade">
 <li>Telegram and Twitter Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
 <li>Initial Marketing Campaign<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
 <li>Pancakeswap Fair Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#FC5600" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
@@ -842,7 +857,7 @@ z-index:3;
 </div>
 <div class="col-12 col-lg-4 text-center py-3">
 <h4 data-aos="fade" class="aos-init">PHASE 2</h4>
-<ul class="list-unstyled text-small text-center mt-3" data-aos="fade">
+<ul class="list-unstyled text-small text-center mt-3 aos-init" data-aos="fade">
 <li>Community Shilling</li>
 <li>Coin Listing Sites</li>
 <li>Telegram and Twitter Calls</li>
@@ -852,7 +867,7 @@ z-index:3;
 </div>
 <div class="col-12 col-lg-4 text-center py-3">
 <h4 data-aos="fade" class="aos-init">PHASE 3</h4>
-<ul class="list-unstyled text-small text-center mt-3" data-aos="fade">
+<ul class="list-unstyled text-small text-center mt-3 aos-init" data-aos="fade">
 <li>Merchandise Launch</li>
 <li>Staking Platform Launch</li>
 <li>Swap Platform Launch</li>
@@ -882,11 +897,11 @@ z-index:3;
 				<div class="g-border-bottom__right"></div>
 			</div>
 <div class="section-container swap-container container py-5">
-<h2 class="mt-4 section-title swap-title text-center" data-aos="fade">BUY $BUDDHA</h2>
+<h2 class="mt-4 section-title swap-title text-center aos-init" data-aos="fade">BUY $BUDDHA</h2>
 
 <div class="row mt-5 mb-4">
 
-    <div class="col-12"><iframe class="d-block mx-auto" src="https://poocoin.app/embed-swap?outputCurrency=" height="480" style="border-radius:12px;max-width:400px;width:100%;" data-aos="fade"></iframe></div>
+    <div class="col-12"><iframe class="d-block mx-auto aos-init" src="https://poocoin.app/embed-swap?outputCurrency=" height="480" style="border-radius:12px;max-width:400px;width:100%;" data-aos="fade"></iframe></div>
 
 
 	
@@ -904,11 +919,11 @@ z-index:3;
 				<div class="g-border-top__right"></div>
 			</div>
 <div class="section-container faq-container container py-5">
-<h2 class="mt-4 section-title faq-title text-center" data-aos="fade">FAQ</h2>
+<h2 class="mt-4 section-title faq-title text-center aos-init" data-aos="fade">FAQ</h2>
 
 <div class="row mb-4 mt-5">
 
-<div class="col-12" data-aos="fade">
+<div class="col-12 aos-init" data-aos="fade">
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -1028,6 +1043,7 @@ AOS.init({
 
 });
 </script>
+
 
 
 
