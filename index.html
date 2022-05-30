@@ -1240,10 +1240,10 @@ setInterval(function(){
 //console.log('TEST DONE PRICE IN BNB ' + priceInBNB.toFixed(20) + ' PRICE IN USD ' + priceInUSD.toFixed(20));
 	$("#priceText").html(priceInUSD.toFixed(20));
 	if(previousPriceInUSD != null){
-	if(priceInUSD.toFixed(20) > previousPriceInUSD.toFixed(20)){
+	if(priceInUSD.toFixed(20) > previousPriceInUSD){
 		console.log('Price went up.');
 	}
-	else if(priceInUSD.toFixed(20) < previousPriceInUSD.toFixed(20)){
+	else if(priceInUSD.toFixed(20) < previousPriceInUSD){
 		console.log('Price went down.');
 	}
 	}
