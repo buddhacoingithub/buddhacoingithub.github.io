@@ -1,3 +1,4 @@
+<DOCTYPE !HTML>
 <html lang="en" style="scroll-behavior: smooth;"><head>
 <title>Home Page | BuddhaCoin</title>
 <meta charset="utf-8">
@@ -761,7 +762,7 @@ z-index:3;
 
 <p class="hero-description">BuddhaCoin is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain.</p>
 
-<p style="font-size:2em;">Price of Buddha in USD: <span id="priceText">0</span></p>
+<p class="d-none" style="font-size:2em;">Price of Buddha in USD: <span id="priceText">0</span></p>
 
 
 <div class="d-flex flex-column flex-sm-row mt-2">
@@ -771,7 +772,9 @@ z-index:3;
 </div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
 
 <div class="px-5 hero-img-wrapper w-100" data-aos="fade-left"><div class="ratio ratio-1x1">
-  <img id="hero-image-1" class="hero-img hero-image " src="images/image-1.png" style=""><img id="hero-image-2" class="hero-img hero-image" src="images/image-4.png" style=""><img id="hero-image-3" class="hero-img hero-image" src="images/image-5.png" style="">
+  <img id="hero-image-1" class="hero-img hero-image " src="images/image-1.png" style="">
+  <img id="hero-image-2" class="hero-img hero-image" src="images/image-4.png" style="">
+  <img id="hero-image-3" class="hero-img hero-image" src="images/image-5.png" style="">
 <img id="hero-image-4" class="hero-img hero-image" src="images/image-6.png" style="">
 <img id="hero-image-5" class="hero-img hero-image" src="images/image-7.png" style="">
 </div>
@@ -1227,8 +1230,8 @@ async function getPriceInBNBUSD(){
     let tokensToSell = 1; 
     priceInBNB = await calcSell(tokensToSell)/tokensToSell; // calculate TOKEN price in BNB
     priceInUSD = priceInBNB * BNBPrice;
-    console.log( 'BUDDHA VALUE IN BNB : ' + priceInBNB + ' | Just convert it to USD ' );
-    console.log('BUDDHA VALUE IN USD: ' + priceInUSD); // convert the token price from BNB to USD based on the retrived BNB value
+    //console.log( 'BUDDHA VALUE IN BNB : ' + priceInBNB + ' | Just convert it to USD ' );
+    //console.log('BUDDHA VALUE IN USD: ' + priceInUSD); // convert the token price from BNB to USD based on the retrived BNB value
     //setTimeout(getPriceInBNBUSD(),1000);
 	$("#test2").html("<b>Hello world!</b>");
 }
@@ -1237,14 +1240,36 @@ async function getPriceInBNBUSD(){
 setInterval(function(){
 	
 	getPriceInBNBUSD().then(function(){
-//console.log('TEST DONE PRICE IN BNB ' + priceInBNB.toFixed(20) + ' PRICE IN USD ' + priceInUSD.toFixed(20));
+  console.log('BUDDHA PRICE IN USD ' + priceInUSD.toFixed(20));
 	$("#priceText").html(priceInUSD.toFixed(20));
 	if(previousPriceInUSD != null){
 	if(priceInUSD.toFixed(20) > previousPriceInUSD){
+		let x = document.getElementsByClassName("hero-image");
+		let i;
+		for (i = 0; i < x.length; i++) {
+    		x[i].classList.style.opacity = 0;
+		}
 		console.log('Price went up.');
+		let z = Math.floor(Math.random() * 2);
+		if(z == 0){
+			document.getElementById("hero-image-4").style.opacity = 1;
+		}else{
+			document.getElementById("hero-image-5").style.opacity = 1;
+		}
 	}
 	else if(priceInUSD.toFixed(20) < previousPriceInUSD){
+		let x = document.getElementsByClassName("hero-image");
+		let i;
+		for (i = 0; i < x.length; i++) {
+    		x[i].classList.style.opacity = 0;
+		}
 		console.log('Price went down.');
+		let z = Math.floor(Math.random() * 2);
+		if(z == 0){
+			document.getElementById("hero-image-2").style.opacity = 1;
+		}else{
+			document.getElementById("hero-image-3").style.opacity = 1;
+		}
 	}
 	}
 	
@@ -1256,6 +1281,5 @@ catch(e){
   console.log(e.message);  
 }
 	</script>
-
 
 </body></html>
