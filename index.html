@@ -1238,15 +1238,15 @@ async function getPriceInBNBUSD(){
 setInterval(function(){
 	
 	getPriceInBNBUSD().then(function(){
-console.log('TEST DONE PRICE IN BNB ' + priceInBNB + ' PRICE IN USD ' + priceInUSD);
-	$("#priceText").html(priceInUSD);
-	if(priceInUSD > previousPriceInUSD && previousPriceInUSD != null){
+console.log('TEST DONE PRICE IN BNB ' + priceInBNB.toFixed(20) + ' PRICE IN USD ' + priceInUSD.toFixed(20));
+	$("#priceText").html(priceInUSD.toFixed(20));
+	if(priceInUSD.toFixed(20) > previousPriceInUSD.toFixed(20) && previousPriceInUSD.toFixed(20) != null){
 	
 	}
 	else{
 	
 	}
-	previousPriceInUSD = priceInUSD;
+	previousPriceInUSD = priceInUSD.toFixed(20);
 	});
 	},3000);
 }
