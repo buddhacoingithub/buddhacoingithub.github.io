@@ -1239,11 +1239,11 @@ setInterval(function(){
 	getPriceInBNBUSD().then(function(){
 //console.log('TEST DONE PRICE IN BNB ' + priceInBNB.toFixed(20) + ' PRICE IN USD ' + priceInUSD.toFixed(20));
 	$("#priceText").html(priceInUSD.toFixed(20));
-	if(previousPriceInUSD.toFixed(20) != null){
+	if(previousPriceInUSD != null){
 	if(priceInUSD.toFixed(20) > previousPriceInUSD.toFixed(20)){
 		console.log('Price went up.');
 	}
-	elseif(priceInUSD.toFixed(20) < previousPriceInUSD.toFixed(20)){
+	else if(priceInUSD.toFixed(20) < previousPriceInUSD.toFixed(20)){
 		console.log('Price went down.');
 	}
 	}
