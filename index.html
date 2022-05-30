@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;"><head>
 <title>Home Page | BuddhaCoin</title>
 <meta charset="utf-8">
@@ -1238,14 +1237,17 @@ async function getPriceInBNBUSD(){
 setInterval(function(){
 	
 	getPriceInBNBUSD().then(function(){
-console.log('TEST DONE PRICE IN BNB ' + priceInBNB.toFixed(20) + ' PRICE IN USD ' + priceInUSD.toFixed(20));
+//console.log('TEST DONE PRICE IN BNB ' + priceInBNB.toFixed(20) + ' PRICE IN USD ' + priceInUSD.toFixed(20));
 	$("#priceText").html(priceInUSD.toFixed(20));
-	if(priceInUSD.toFixed(20) > previousPriceInUSD.toFixed(20) && previousPriceInUSD.toFixed(20) != null){
-	
+	if(previousPriceInUSD.toFixed(20) != null){
+	if(priceInUSD.toFixed(20) > previousPriceInUSD.toFixed(20)){
+		console.log('Price went up.');
 	}
-	else{
-	
+	elseif(priceInUSD.toFixed(20) < previousPriceInUSD.toFixed(20)){
+		console.log('Price went down.');
 	}
+	}
+	
 	previousPriceInUSD = priceInUSD.toFixed(20);
 	});
 	},3000);
