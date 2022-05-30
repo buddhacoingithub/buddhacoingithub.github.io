@@ -748,7 +748,7 @@ z-index:3;
 
   
 <div class="hero-container container py-5 d-flex flex-column justify-content-center align-items-center">
-<div class="row">
+<div class="row w-100">
 
 <div data-aos="fade-right" class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
 
@@ -766,7 +766,13 @@ z-index:3;
 </div>
 </div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
 
-<div class="px-5 hero-img-wrapper w-100" data-aos="fade-left"><img class="hero-img hero-image img-fluid w-100" src="images/image-1.png" style="background:transparent !important;filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));"></div>
+<div class="px-5 hero-img-wrapper w-100" data-aos="fade-left"><div class="ratio ratio-1x1">
+  <img class="hero-img hero-image img-fluid w-100" src="images/image-1.png" style="filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));" id="hero-image-1"><img id="hero-image-2" class="hero-img hero-image img-fluid w-100" src="images/image-4.png" style="filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));"><img id="hero-image-3" class="hero-img hero-image img-fluid w-100" src="images/image-5.png" style="filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));">
+<img id="hero-image-4" class="hero-img hero-image img-fluid w-100" src="images/image-6.png" style="filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));">
+<img id="hero-image-5" class="hero-img hero-image img-fluid w-100" src="images/image-7.png" style="filter: drop-shadow(0 0 20px rgb(252 255 255 / 100%));">
+</div>
+
+</div>
 
 
 
@@ -799,8 +805,8 @@ z-index:3;
 
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
-<img class="img-fluid mb-3" src="images/community-driven-2.png" style="max-height:100px;">
-<span class="tax-title-2 text-center mb-3">COMMUNITY DRIVEN</span><span class="tax-description text-center">Community focused and fair launched. The future of the project will depend on the community.</span>
+<img class="img-fluid mb-3" src="images/team-2.png" style="max-height:100px;">
+<span class="tax-title-2 text-center mb-3">EXPERIENCED TEAM</span><span class="tax-description text-center">This project is handled by experienced developers and marketers on crypto world.</span>
 </div>
 </div>
 
@@ -1151,7 +1157,7 @@ async function getPriceInBNBUSD(){
     priceInUSD = priceInBNB * BNBPrice;
     console.log( 'BUDDHA VALUE IN BNB : ' + priceInBNB + ' | Just convert it to USD ' );
     console.log('BUDDHA VALUE IN USD: ' + priceInUSD); // convert the token price from BNB to USD based on the retrived BNB value
-    //setTimeout(getPriceInBNBUSD(),5000);
+    //setTimeout(getPriceInBNBUSD(),1000);
 }
  
 	
@@ -1160,10 +1166,11 @@ setInterval(function(){
 	getPriceInBNBUSD().then(function(){
 console.log('TEST DONE PRICE IN BNB ' + priceInBNB + ' PRICE IN USD ' + priceInUSD);
 	});
-	},5000);
+	},1000);
 }
 catch(e){
   console.log(e.message);  
 }
 	</script>
+
 </body></html>
