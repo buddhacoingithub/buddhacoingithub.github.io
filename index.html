@@ -761,14 +761,13 @@ z-index:3;
 <h1 class="hero-title text-center mb-3"><span>BUDDHACOIN</span> </h1>
 
 <p class="hero-description">BuddhaCoin is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain.</p>
-<div class="d-none d-flex flex-column flex-sm-row mt-3">
-<a type="button" class="buy-button btn btn-primary m-2 " href="https://pancakeswap.finance/swap?outputCurrency=0x6927874e3b90ca69a0cc5d34b38bdbfc0a4aeaba" target="_blank" style="box-shadow: rgba(204, 29, 222, 0.25) 0px 6px 12px -2px, rgba(204, 29, 222, 0.3) 0px 3px 7px -3px !important;">Buy On Pancakeswap</a>
-<a type="button" class="telegram-button btn btn-primary m-2" href="https://t.me/FartInu" target="_blank" style="box-shadow: rgba(76, 232, 211, 0.25) 0px 6px 12px -2px, rgba(76, 232, 211, 0.3) 0px 3px 7px -3px !important;">Join Our Telegram</a>
-</div>
+
+<p style="font-size:2em;">Price of Buddha in USD: <span id="priceText">0</span></p>
+
 
 <div class="d-flex flex-column flex-sm-row mt-2">
-<a type="button" class="buy-button btn btn-primary m-2 " href="https://app.uniswap.org/#/swap?&amp;chain=mainnet&amp;use=v2&amp;outputCurrency=0x395D3191D0F0c7e54d2Ba9dE4C701c7DCB70A0b1" target="_blank">BUY ON PANCAKESWAP</a>
-<a type="button" class="telegram-button btn btn-primary m-2" href="https://t.me/EcoChainEthOfficial" target="_blank">JOIN OUR TELEGRAM</a>
+<a type="button" class="buy-button btn btn-primary m-2 " href="h#" target="_blank">BUY ON PANCAKESWAP</a>
+<a type="button" class="telegram-button btn btn-primary m-2" href="#" target="_blank">JOIN OUR TELEGRAM</a>
 </div>
 </div><div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5" style="position:relative;">
 
@@ -1121,14 +1120,14 @@ To be announced.
 <li class="d-none"><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">CRO Telegram</a></li>
 <li class="d-none"><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">DEXScreener</a></li>
 <li class="d-none"><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">MM.Finance</a></li>
-<li><a class="text-decoration-none" href="https://t.me/megamaninubsc" target="_blank" rel="nofollow">TELEGRAM</a></li>
+<li><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">TELEGRAM</a></li>
 <li class=""><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">DISCORD</a></li>
 <li class="d-none"><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">Reddit</a></li>
 <li class="d-none"><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">INSTAGRAM</a></li>
 <li class="d-none"><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">FACEBOOK</a></li>
 <li class=""><a class="text-decoration-none" href="#" target="_blank" rel="nofollow">TWITTER</a></li>
-<li><a class="text-decoration-none" href="https://poocoin.app/tokens/0xe6f02795fb08d9894ad531781772f5d19dcb736d" target="_blank" rel="nofollow">POOCOIN</a></li>
-<li><a class="text-decoration-none" href="0xe6f02795fb08d9894ad531781772f5d19dcb736d" target="_blank" rel="nofollow">PANCAKESWAP</a></li>
+<li><a class="text-decoration-none" href="https://poocoin.app/tokens/" target="_blank" rel="nofollow">POOCOIN</a></li>
+<li><a class="text-decoration-none" href="" target="_blank" rel="nofollow">PANCAKESWAP</a></li>
 </ul>
 </div>
 </div>
@@ -1178,7 +1177,7 @@ AOS.init({
 		console.log(BUDDHA_CONTRACT_ADDRESS);
 	var BNB_CONTRACT_ADDRESS = '0xae13d989dac2f0debff460ac112a837c89baa7cd';
 	var USD_CONTRACT_ADDRESS = '0x78867BbEeF44f2326bF8DDd1941a4439382EF2A7';
-	var priceInBNB, priceInUSD;	
+	var priceInBNB, priceInUSD, previousPriceInUSD;
 	
 	try{
 let web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545");
@@ -1232,6 +1231,7 @@ async function getPriceInBNBUSD(){
     console.log( 'BUDDHA VALUE IN BNB : ' + priceInBNB + ' | Just convert it to USD ' );
     console.log('BUDDHA VALUE IN USD: ' + priceInUSD); // convert the token price from BNB to USD based on the retrived BNB value
     //setTimeout(getPriceInBNBUSD(),1000);
+	$("#test2").html("<b>Hello world!</b>");
 }
  
 	
@@ -1239,8 +1239,16 @@ setInterval(function(){
 	
 	getPriceInBNBUSD().then(function(){
 console.log('TEST DONE PRICE IN BNB ' + priceInBNB + ' PRICE IN USD ' + priceInUSD);
+	$("#priceText").html(priceInUSD);
+	if(priceInUSD > previousPriceInUSD && previousPriceInUSD != null){
+	
+	}
+	else{
+	
+	}
+	previousPriceInUSD = priceInUSD;
 	});
-	},1000);
+	},3000);
 }
 catch(e){
   console.log(e.message);  
