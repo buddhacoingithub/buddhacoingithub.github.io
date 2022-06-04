@@ -397,7 +397,24 @@ max-width:730px;
 .roadmap-section{
 background:transparent;
 }
-	
+
+.roadmap-section .roadmap-motorcycle{
+     position:absolute;
+top:20px;
+z-index:-1;
+    animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-2;
+        animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes bounce-2 {
+        0%   { left:100%; }
+        45%  { left:calc(50% - 75px); }
+        55%  { left:calc(50% - 65px); }
+        100%  { left:calc(0px - 140px); }
+    } 
+
 .roadmap-container{
 color:#FC5600;
 }
@@ -420,6 +437,8 @@ font-size: 2em;
     font-weight:700;
 }
 
+     
+    
 /* ---------------- */
 
 /* SWAP SECTION */
@@ -538,6 +557,10 @@ font-weight:700;
 }
 
 @media (min-width: 992px){
+    
+    .roadmap-section .roadmap-motorcycle{
+     animation-duration: 10s;
+    }
 
 .faq-container .faq-title{
     font-size:6em;
@@ -766,7 +789,7 @@ z-index:3;
 
 <p class="hero-description" data-aos="fade">BuddhaCoin is a hyper-deflationary, community-driven token deployed on the Binance Smart Chain.</p>
 
-<p class="d-none" style="font-size:2em;">Price of Buddha in USD: <span id="priceText">0.00000000000005114959</span></p>
+<p class="d-none" style="font-size:2em;">Price of Buddha in USD: <span id="priceText">0.00000000000005114595</span></p>
 
 
 <div class="d-flex flex-column flex-sm-row mt-2" data-aos="fade">
@@ -778,8 +801,8 @@ z-index:3;
 <div class="hero-img-wrapper w-100 px-lg-5" data-aos="fade"><div class="ratio ratio-1x1">
   <img id="hero-image-1" class="hero-img hero-image " src="images/image-1.png" style="opacity: 0;">
   <img id="hero-image-2" class="hero-img hero-image" src="images/image-4.png" style="opacity: 0;">
-  <img id="hero-image-3" class="hero-img hero-image" src="images/image-5.png" style="opacity: 1;">
-<img id="hero-image-4" class="hero-img hero-image" src="images/image-6.png" style="opacity: 0;">
+  <img id="hero-image-3" class="hero-img hero-image" src="images/image-5.png" style="opacity: 0;">
+<img id="hero-image-4" class="hero-img hero-image" src="images/image-6.png" style="opacity: 1;">
 <img id="hero-image-5" class="hero-img hero-image" src="images/image-7.png" style="opacity: 0;">
 </div>
 
@@ -883,7 +906,7 @@ z-index:3;
 <div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
 <span class="tax-title text-center mb-3">6%</span>
-<span class="tax-title-2 text-center mb-3">MARKETING</span><span class="tax-description text-center">6% of every transaction is taken and will be used for enhancements, operations, and marketing of the project.</span>
+<span class="tax-title-2 text-center mb-3">MARKETING</span><span class="tax-description text-center">6% of every transaction is taken and will be used for operations and marketing of the project.</span>
 </div>
 </div><div class="col-12 col-lg-4 mb-4">
 <div class="tax-card h-100 d-flex flex-column justify-content-center align-items-center px-4 py-5 mx-auto" data-aos="fade" style="">
@@ -906,18 +929,15 @@ z-index:3;
 </div>
 </section>
 
-<section id="roadmap" class="py-5 section roadmap-section" style="position:relative;">
-    <div class="g-border-top">
-				<div class="g-border-top__left"></div>
-				<div class="g-border-top__center"></div>
-				<div class="g-border-top__right"></div>
-			</div>
+<section id="roadmap" class="py-5 section roadmap-section" style="position:relative;overflow-x:hidden;">
+    <img class="img-fluid roadmap-motorcycle" src="images/image-12.png" width="140px" data-aos="fade">
 <div class="section-container roadmap-container container py-5">
+    
 <div class="text-center">
-<h2 class="mb-5 pb-4 section-title roadmap-title" data-aos="fade">ROADMAP</h2>
-<div class="row">
+<h2 class="mt-5 mb-5 pb-4 section-title roadmap-title" data-aos="fade">ROADMAP</h2>
+<div class="row mb-3">
     <div class="col-12 col-lg-6 text-center text-lg-end py-3">
-<img class="img-fluid" src="images/image-7.png" width="280px">
+<img class="img-fluid" src="images/image-11.png" width="280px" data-aos="fade">
 </div>
 <div class="col-12 col-lg-6 text-center text-lg-start py-3 d-flex flex-column justify-content-center ">
 <h4 data-aos="fade" class="aos-init">PHASE 1</h4>
@@ -929,7 +949,9 @@ z-index:3;
 <li>Website V1 Launch<svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#580B08" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"></path></svg></li>
 </ul>
 </div>
-<div class="col-12 col-lg-6 text-center text-lg-end py-3 d-flex flex-column justify-content-center ">
+</div>
+<div class="row mb-3">
+<div class="col-12 col-lg-6 order-2 order-lg-1 text-center text-lg-end py-3 d-flex flex-column justify-content-center ">
 <h4 data-aos="fade" class="aos-init">PHASE 2</h4>
 <ul class="list-unstyled text-small text-center text-lg-end mt-3" data-aos="fade">
 <li>Community Shilling</li>
@@ -940,11 +962,15 @@ z-index:3;
 </ul>
 </div>
 
-<div class="col-12 col-lg-6 text-center py-3 text-center text-lg-start">
-<img class="img-fluid" src="images/image-6.png" width="280px">
+<div class="col-12 col-lg-6  order-1 order-lg-2 text-center py-3 text-center text-lg-start">
+<img class="img-fluid" src="images/image-9.png" width="280px" data-aos="fade">
 
-</div><div class="col-12 col-lg-6 text-center text-lg-end py-3">
-<img class="img-fluid" src="images/image-7.png" width="280px">
+</div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-12 col-lg-6 text-center text-lg-end py-3">
+<img class="img-fluid" src="images/image-10.png" width="280px" data-aos="fade">
 </div>
 
 <div class="col-12 col-lg-6 text-center text-lg-start py-3 d-flex flex-column justify-content-center ">
@@ -1300,6 +1326,7 @@ catch(e){
   console.log(e.message);  
 }
 	</script>
+
 
 
 
